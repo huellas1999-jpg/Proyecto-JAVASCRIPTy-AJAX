@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Laboratorio JS & AJAX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--aquí llamamos a nuestro archivo styles.css -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!--contenedor usando 2 columnas la del sidebar y contenido principal -->
+<div class="container">
+<!--Muestra el menú lateral con vínculos rápidos hacia cada ejercicio, facilitando la navegación interna.-->
+    <nav class="sidebar">
+      <h2>Laboratorio JS/AJAX</h2>
+      <a href="#js1">Palíndromo</a>
+      <a href="#js2">Mayor de dos</a> 
+      <a href="#js3">Vocales presentes</a>
+      <a href="#js4">Conteo de vocales</a>
+      <a href="#ajax">AJAX</a>
+    </nav>
+<!--Es donde se muestran los títulos y cada uno de los ejercicios o demostraciones desarrolladas.-->
+    <main class="main">
+      <h1>Laboratorio JavaScript y AJAX</h1>
+      <p>
+      </p>
+      <!--Permite ingresar texto y comprobar si es un palíndromo utilizando un campo y un botón. El resultado aparece inmediatamente debajo-->
+      <section class="ejercicio" id="js1">
+        <h3>1. Verificar si una cadena es palíndromo</h3>
+        <label>Introduce texto:</label>
+        <input id="palindromoStr" type="text">
+        <button onclick="ej1_palindromo()">Verificar</button>
+        <div id="palindromoRes" class="result"></div>
+      </section>
+      <!--Dispone dos campos numéricos para comparar y mostrar el mayor o igualdad. -->
+      <section class="ejercicio" id="js2">
+        <h3>2. Comparador de dos números</h3>
+        <input id="num1" type="number" placeholder="Primer número">
+        <input id="num2" type="number" placeholder="Segundo número">
+        <button onclick="ej2_mayor()">Comparar</button>
+        <div id="mayorRes" class="result"></div>
+      </section>
+      <!--Permite detectar y listar las vocales presentes en el texto ingresado. -->
+      <section class="ejercicio" id="js3">
+        <h3>3. Vocales que aparecen en la frase</h3>
+        <input id="fraseVocales" type="text" style="width: 300px;">
+        <button onclick="ej3_vocales()">Detectar vocales</button>
+        <div id="vocalesRes" class="result"></div>
+      </section>
+      <!--Muestra cuántas veces aparece cada vocal en una frase dada, usando un área de texto.-->
+      <section class="ejercicio" id="js4">
+        <h3>4. Conteo de cada vocal en la frase</h3>
+        <textarea id="fraseConteo" rows="2" style="width: 320px;"></textarea>
+        <button onclick="ej4_conteo()">Contar vocales</button>
+        <div id="conteoRes" class="result"></div>
+      </section>
+      <section class="ajax-section" id="ajax">
+        <h3>AJAX: Pruebas con Fetch()</h3>
+        <div>
+          <label>URL:</label>
+          <input type="text" id="urlInput" size="50">
+          <button onclick="mostrarContenidos()">Mostrar Contenidos</button>
+        </div>
+        <div>
+          <b>Estado petición:</b> <span id="estadoPeticion">No iniciada</span>
+        </div>
+        <div>
+          <b>Código estado:</b> <span id="codigoEstado"></span>
+        </div>
+        <div>
+          <b>Cabeceras HTTP:</b>
+          <div id="cabecerasHTTP" class="zona" style="white-space: pre;"></div>
+        </div>
+        <div>
+          <b>Contenidos:</b>
+          <div id="contenidos" class="zona"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+<!--Al final de la página se incluye un pie elegante, que otorga autoría y marca la finalización del contenido, siguiendo buenas prácticas de cierre en página web-->
+<footer>
+    © 2025 - Laboratorio JavaScript y AJAX. Todos los derechos reservados.
+  </footer>
+<!--Se enlaza el archivo de JavaScript externo responsable del funcionamiento dinámico de toda la página-->
+  <script src="script.js"></script>
+</body>
+</html>
